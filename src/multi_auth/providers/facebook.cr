@@ -33,7 +33,7 @@ class MultiAuth::Provider::Facebook < MultiAuth::Provider
     property access_token : OAuth2::AccessToken?
     property picture_url : String?
 
-    JSON.mapping(
+    JSON.mapping({
       id: String,
       name: String,
       last_name: String?,
@@ -42,7 +42,7 @@ class MultiAuth::Provider::Facebook < MultiAuth::Provider
       location: String?,
       about: String?,
       website: String?
-    )
+    })
   end
 
   private def fetch_fb_user(code)
