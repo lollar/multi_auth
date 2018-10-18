@@ -1,3 +1,5 @@
+require "json"
+
 abstract class MultiAuth::Provider
   getter redirect_uri : String
   getter key : String
